@@ -28,7 +28,9 @@ There are some prebuilt datasets that you can download and use in conjuction wit
 
 ## Installation instruction:
 
-You can pull and install TECookbook package through R command: `remotes::install_github("zeropin/TECookbook")`
+You can pull and install TECookbook package through R command:
+
+`remotes::install_github("zeropin/TECookbook")`
 
 ## Acknowledgement:
 
