@@ -6,7 +6,7 @@ This package is developed to annotate and parse Transposabe-elements (TEs)-assoc
 
 **annotateSitesInRepeat**: Annotate a list of binding sites that are contained in certain repeat elements, defined by RepeatMasker
 
-*annotatePeaksNearRepeat*: Annotate a list of ChIP-seq peaks that overlap with repeat elements
+**annotatePeaksNearRepeat**: Annotate a list of ChIP-seq peaks that overlap with repeat elements
 
 **buildChain**: Construct a liftOver chain file and repeat sizes file based on [RepeatMasker alignment file (.align)](https://repeatmasker.org/species/hg.html) to map ChIP signals onto repeat coordinates
 
@@ -18,7 +18,7 @@ There are some prebuilt datasets that you can download and use in conjuction wit
 
 [**Repeat.Human.hg38**](https://share.weiyun.com/3gXU6Chs): Annotation data based on RepeatMasker file hg38.fa.out
 
-[**Repeat.Human.hg19**]:(https://share.weiyun.com/tIlSmg3m) Annotation data based on RepeatMasker file hg19.fa.out
+[**Repeat.Human.hg19**](https://share.weiyun.com/tIlSmg3m): Annotation data based on RepeatMasker file hg19.fa.out
 
 [**Repeat.Mouse.mm10**](https://share.weiyun.com/TIYK2Q8s): Annotation data based on RepeatMasker file mm10.fa.out
 
