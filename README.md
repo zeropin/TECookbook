@@ -8,7 +8,7 @@ This package is developed to annotate and parse Transposabe-elements (TEs)-assoc
 
 **annotatePeaksNearRepeat**: Annotate a list of ChIP-seq peaks that overlap with repeat elements
 
-**buildChain**: Construct a liftOver chain file and repeat sizes file based on RepeatMasker alignment file (.align) to map ChIP signals onto repeat coordinates
+**buildChain**: Construct a liftOver chain file and repeat sizes file based on [RepeatMasker alignment file (.align)](https://repeatmasker.org/species/hg.html) to map ChIP signals onto repeat coordinates
 
 **liftOut**: Lift all sites out of a specific repeat family at defined locus
 
