@@ -1,0 +1,12 @@
+Package: TECookbook
+Type: Package
+Title: Cookbook for Transposable elements (TEs)
+Version: 1.0
+Author: Zheng Zuo
+Maintainer: Zheng Zuo <zeropin@live.cn>
+Description: Annotating and parsing Transposable elements-associated data
+License: GPL3 
+Encoding: UTF-8
+LazyData: true
+Depends: dplyr, GenomicRanges
+RoxygenNote: 7.2.1
