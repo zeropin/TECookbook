@@ -2,7 +2,7 @@
 
 This package is developed to annotate and parse Transposabe-elements (TEs)-associated data.
 
-Currently it contains four functions and some prebuilt datasets:
+### Currently it contains four functions:
 
 **annotateSitesInRepeat**: Annotate a list of binding sites that are contained in certain repeat elements, defined by RepeatMasker
 
@@ -12,7 +12,9 @@ Currently it contains four functions and some prebuilt datasets:
 
 **liftOut**: Lift all sites out of a specific repeat family at defined locus
 
-**Repeat.Human.hg38**: Annotation data based on RepeatMasker file hg38.fa.out
+### There are some prebuilt datasets that you can download and use in conjuction with this package directly
+
+[**Repeat.Human.hg38**](https://share.weiyun.com/3gXU6Chs): Annotation data based on RepeatMasker file hg38.fa.out
 
 **Repeat.Human.hg19**: Annotation data based on RepeatMasker file hg19.fa.out
 
