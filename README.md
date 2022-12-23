@@ -1,8 +1,8 @@
-## TECookbook: Annotating and parsing transposable-elements associated data
+# TECookbook: Annotating and parsing transposable-elements associated data
 
 This package is developed to annotate and parse Transposabe-elements (TEs)-associated data.
 
-### Currently it contains four functions:
+## Currently it contains four functions:
 
 **annotateSitesInRepeat**: Annotate a list of binding sites that are contained in certain repeat elements, defined by RepeatMasker
 
@@ -12,7 +12,7 @@ This package is developed to annotate and parse Transposabe-elements (TEs)-assoc
 
 **liftOut**: Lift all sites out of a specific repeat family at defined locus
 
-### There are some prebuilt datasets that you can download and use in conjuction with this package directly
+## There are some prebuilt datasets that you can download and use in conjuction with this package directly
 
 [**Repeat.Human.hg38**](https://share.weiyun.com/3gXU6Chs): Annotation data based on RepeatMasker file hg38.fa.out
 
@@ -20,12 +20,14 @@ This package is developed to annotate and parse Transposabe-elements (TEs)-assoc
 
 **Repeat.Mouse.mm10**: Annotation data based on RepeatMasker file mm10.fa.out
 
-### Installation instruction:
+## Installation instruction:
 
 You can pull and install TECookbook package through R command: `remotes::install_github("zeropin/TECookbook")`
 
-### Acknowledgement:
+## Acknowledgement:
 
 Some functions of this package, such as annotate\*\*, are derived and modified from other packages [ChIPpeakAnno](https://github.com/jianhong/ChIPpeakAnno). I want to thank their generous sharing of the source codes and permission for reuse.
 
-Please contact me if you have any question. Zheng Zuo [zeropin\@live.cn](mailto:zeropin@live.cn)
+Please contact me if you have any question.
+
+Zheng Zuo [zeropin\@live.cn](mailto:zeropin@live.cn)
