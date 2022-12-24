@@ -4,6 +4,8 @@ This package is developed to annotate and parse Transposabe-elements (TEs)-assoc
 
 ## Functions within TECookbook
 
+**buildAnnotation**: Convert [RepeatMasker file (.out)](https://repeatmasker.org/species/hg.html) to Genomic Range for annotation of ChIP-seq peaks or binding sites
+
 **annotateSitesInRepeat**: Annotate a list of binding sites that are contained in certain repeat elements, defined by RepeatMasker
 
 **annotatePeaksNearRepeat**: Annotate a list of ChIP-seq peaks that overlap with repeat elements
