@@ -37,8 +37,8 @@ remotes::install_github("zeropin/TECookbook")
 
 ## Application examples
 
-ZNF10 and ZNF382 have been studied as case examples to reveal their relationship with LINE-1 family repeats, which can be accessed via
-[ZNF10](https://github.com/zeropin/ZFPCookbook/ZNF10) and [ZNF382](https://github.com/zeropin/ZFPCookbook/ZNF382)
+TECookbook has been successfully used to study the relationship of ZNF10 and ZNF382 with LINE-1 family repeats, which can be accessed via
+[ZNF10](https://github.com/zeropin/ZFPCookbook/ZNF10) and [ZNF382](https://github.com/zeropin/ZFPCookbook/ZNF382) respectively.
 
 ## Acknowledgement:
 
