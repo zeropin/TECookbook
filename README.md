@@ -12,7 +12,7 @@ This package is developed to annotate and parse Transposabe-elements (TEs)-assoc
 
 **buildChain**: Construct a liftOver chain file and repeat sizes file based on [RepeatMasker alignment file (.align)](https://repeatmasker.org/species/hg.html) to map ChIP signals onto repeat coordinates
 
-**liftOut**: Lift all sites out of a specific repeat family at defined locus
+**liftOut**: Lift all sites out of a specific repeat family at defined locus based on [RepeatMasker alignment file (.align)](https://repeatmasker.org/species/hg.html)
 
 ## Prebuilt datasets
 
