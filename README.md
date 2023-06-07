@@ -2,9 +2,13 @@
 
 This package is developed to annotate and parse Transposabe-elements (TEs)-associated data. It has been successfully used to study the co-evolution relationship of ZNF10 and ZNF382 with LINE-1 family repeats, which can be accessed via [ZNF10](https://github.com/zeropin/ZFPCookbook/tree/master/ZNF10) and [ZNF382](https://github.com/zeropin/ZFPCookbook/tree/master/ZNF382) respectively.
 
-If you are analyzing ChIP-seq data associated with human or mouse repeats, you can directly download prebuilt datasets below to save time. The easiest way to start using this package is to copy and modify existing workflow of [ZNF10](https://github.com/zeropin/ZFPCookbook/blob/master/ZNF10/htmls/Analysis-of-ZNF10-with-LINE1s.pdf) or [ZNF382](https://github.com/zeropin/ZFPCookbook/blob/master/ZNF382/htmls/Analysis-of-ZNF382-with-LIINE-1.pdf), which demostrates how to process raw ChIP-seq sequencing files into normalized signal tracks defined in reference repeat coordinates (bedgraph formats) for visualization and how to extract the putative binding sites sequence from any defined repeat locus for specificity analysis.
+If you are analyzing ChIP-seq data associated with human or mouse repeats, you can directly download [prebuilt datasets](https://share.weiyun.com/wB9jqSaO) below to save time. The easiest way to start using this package is to copy and modify existing workflow of [ZNF10](https://github.com/zeropin/ZFPCookbook/blob/master/ZNF10/htmls/Analysis-of-ZNF10-with-LINE1s.pdf) or [ZNF382](https://github.com/zeropin/ZFPCookbook/blob/master/ZNF382/htmls/Analysis-of-ZNF382-with-LIINE-1.pdf), which demostrates how to process raw ChIP-seq sequencing files into normalized signal tracks defined in reference repeat coordinates (bedgraph formats) for visualization and how to extract the putative binding sites sequence from any defined repeat locus for specificity analysis. Unix-like environment is recommended to run the [Makefile](https://github.com/zeropin/ZFPCookbook/blob/master/ZNF10/R/Makefile) for liftIn operation.
 
-If you are analyzing some non-human/mouse repeats data, you probably need to download or process the standard RepeatMasker output (.out and .align) into some chain file first using the buildChain function of this package for downstream liftIn operation.
+If you are analyzing some non-human/mouse repeats data, you probably need to download or process the standard RepeatMasker output (.out and .align files) into some chain file using the following **buildChain** function of this package before liftIn operation and signals visualization.
+
+```r
+TECookook::buildChain(alignment = "hg38.fa.align", chainFile = "Hg38ToRepeat.over.chain", sizeFile = "hg38.Repeat.sizes")
+```
 
 ## Functions within TECookbook
 
@@ -17,6 +21,14 @@ If you are analyzing some non-human/mouse repeats data, you probably need to dow
 **buildChain**: Construct a liftOver chain file and repeat sizes file based on [RepeatMasker alignment file (.align)](https://repeatmasker.org/species/hg.html) to map ChIP signals onto repeat coordinates
 
 **liftOut**: Lift all sites out of a specific repeat family at defined locus based on [RepeatMasker alignment file (.align)](https://repeatmasker.org/species/hg.html)
+
+## Installation instruction:
+
+You can pull and install TECookbook package through R command:
+```r
+remotes::install_github("zeropin/TECookbook")
+```
+RStudio is recommended to install and use this package.
 
 ## Prebuilt datasets
 
@@ -32,14 +44,6 @@ There are some prebuilt datasets that you can download and use in conjuction wit
 
 [**Repeat.sizes**](https://share.weiyun.com/wB9jqSaO): The Repeat sizes file in Human genome, constructed by buildChain function
 
-## Installation instruction:
-
-You can pull and install TECookbook package through R command:
-```r
-remotes::install_github("zeropin/TECookbook")
-```
-
-RStudio is recommended to install and use this package.
 
 ## Acknowledgement:
 
