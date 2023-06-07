@@ -17,7 +17,23 @@ Repeats.Human.hg38 = buildAnnotation("hg38.fa.out")
 
 **annotateSitesInRepeat**: Annotate a list of binding sites that are contained in certain repeat elements, defined by RepeatMasker
 
+```r
+Example: annotate mySiteList by Repeat.hg38, and output all sites
+library(TECookbook)
+data(Reoeats.Human.hg38)
+annotateSite = annotateSitesInRepeat(mySiteList, AnnotationData=Repeats.Human.hg38, 
+               SiteLocForDistance = "middle", RepeatLocForDistance = "middle",
+               output = "all")
+```
 **annotatePeaksNearRepeat**: Annotate a list of ChIP-seq peaks that overlap with repeat elements
+
+```r
+Example: annotate myPeakList by Repeat.hg38, and output all peaks
+library(TECookbook)
+data(Repeats.Human.hg38)
+annotatePeak = annotatePeaksNearRepeat(myPeakList, AnnotationData=Repeats.Human.hg38,
+                                       minOverlap=1, output = "all")
+```
 
 **buildChain**: Construct a liftOver chain file and repeat sizes file based on [RepeatMasker alignment file (.align)](https://repeatmasker.org/species/hg.html) to map ChIP signals onto repeat coordinates
 
