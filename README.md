@@ -1,6 +1,10 @@
 # TECookbook: Annotating and parsing transposable-elements associated data
 
-This package is developed to annotate and parse Transposabe-elements (TEs)-associated data. It has been successfully used to study the co-evolution relationship of ZNF10 and ZNF382 with LINE-1 family repeats, which can be accessed via [ZNF10](https://github.com/zeropin/ZFPCookbook/tree/master/ZNF10) and [ZNF382](https://github.com/zeropin/ZFPCookbook/tree/master/ZNF382) respectively. The easiest way to use this package is to modify the existing analysis workflow of ZNF10 or ZNF382.
+This package is developed to annotate and parse Transposabe-elements (TEs)-associated data. It has been successfully used to study the co-evolution relationship of ZNF10 and ZNF382 with LINE-1 family repeats, which can be accessed via [ZNF10](https://github.com/zeropin/ZFPCookbook/tree/master/ZNF10) and [ZNF382](https://github.com/zeropin/ZFPCookbook/tree/master/ZNF382) respectively.
+
+If you are analyzing ChIP-seq data associated with human or mouse repeats, you can directly download prebuilt datasets below to save time. The easiest way to start using this package is to copy and modify existing workflow of [ZNF10](https://github.com/zeropin/ZFPCookbook/blob/master/ZNF10/htmls/Analysis-of-ZNF10-with-LINE1s.pdf) or [ZNF382](https://github.com/zeropin/ZFPCookbook/blob/master/ZNF382/htmls/Analysis-of-ZNF382-with-LIINE-1.pdf), which demostrates how to process raw ChIP-seq sequencing files into normalized signal tracks defined in reference repeat coordinates (bedgraph formats) for visualization and how to extract the putative binding sites sequence from any defined repeat locus for specificity analysis.
+
+If you are analyzing some non-human/mouse repeats data, you probably need to download or process the standard RepeatMasker output (.out and .align) into some chain file first using the buildChain function of this package for downstream liftIn operation.
 
 ## Functions within TECookbook
 
