@@ -6,7 +6,7 @@ If you are analyzing ChIP-seq data associated with human or mouse repeats, you c
 
 If you are analyzing some non-human/mouse repeats data, you need to download and process the standard RepeatMasker output (.out and .align files) into some chain file using the **buildChain** function of this package first, and then perform liftIn operation for signal visualization.
 
-## Functions and command examples of TECookbook
+## Functions and code examples of TECookbook
 
 **buildAnnotation**: Convert [RepeatMasker file (.out)](https://repeatmasker.org/species/hg.html) to Genomic Range for annotation of ChIP-seq peaks or binding sites
 
