@@ -39,7 +39,9 @@ annotatePeak = annotatePeaksNearRepeat(myPeakList, AnnotationData=Repeats.Human.
 
 ```r
 Example: convert human RepeatMasker output into chain file for liftIn operation
-TECookook::buildChain(alignment = "hg38.fa.align", chainFile = "Hg38ToRepeat.over.chain", sizeFile = "hg38.Repeat.sizes")
+TECookook::buildChain(alignment = "hg38.fa.align",
+                      chainFile = "Hg38ToRepeat.over.chain",
+                      sizeFile = "hg38.Repeat.sizes")
 ```
 
 **liftOut**: Lift all sites out of a specific repeat family at defined locus based on [RepeatMasker alignment file (.align)](https://repeatmasker.org/species/hg.html)
