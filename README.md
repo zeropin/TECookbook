@@ -1,6 +1,6 @@
 # TECookbook: Annotating and parsing transposable-elements associated data
 
-This package is developed to annotate and parse Transposabe-elements (TEs)-associated data.
+This package is developed to annotate and parse Transposabe-elements (TEs)-associated data. It has been successfully used to study the co-evolution relationship of ZNF10 and ZNF382 with LINE-1 family repeats, which can be accessed via [ZNF10](https://github.com/zeropin/ZFPCookbook/tree/master/ZNF10) and [ZNF382](https://github.com/zeropin/ZFPCookbook/tree/master/ZNF382) respectively. The easiest way to use this package is to modify the existing analysis workflow of ZNF10 or ZNF382.
 
 ## Functions within TECookbook
 
@@ -34,11 +34,6 @@ You can pull and install TECookbook package through R command:
 ```r
 remotes::install_github("zeropin/TECookbook")
 ```
-
-## Application examples
-
-TECookbook has been successfully used to study the relationship of ZNF10 and ZNF382 with LINE-1 family repeats, which can be accessed via
-[ZNF10](https://github.com/zeropin/ZFPCookbook/tree/master/ZNF10) and [ZNF382](https://github.com/zeropin/ZFPCookbook/tree/master/ZNF382) respectively.
 
 ## Acknowledgement:
 
