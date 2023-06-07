@@ -35,6 +35,8 @@ You can pull and install TECookbook package through R command:
 remotes::install_github("zeropin/TECookbook")
 ```
 
+RStudio is recommended to install and use this package.
+
 ## Acknowledgement:
 
 Some functions of this package, such as annotate\*\*, are derived and modified from other packages [ChIPpeakAnno](https://github.com/jianhong/ChIPpeakAnno). I want to thank their generous sharing of the source codes and permission for reuse.
