@@ -26,6 +26,7 @@ Construct Chain file and Repeat sizes file for liftOver operation between genome
 \examples{
          ##Example 1: Construct chain file for all repeats in hg38 genome
          buildChain(alignment = "hg38.fa.align", chainFile = "Hg38ToRepeat.over.chain", sizeFile = "hg38.Repeat.sizes")
+
          ##Example 2: Construct chain file for THE1A repeats only in hg38 genome
          buildChain(alignment = "hg38.fa.align", chainFile = "Hg38ToTHE1A.over.chain", sizeFile = "THE1A.Repeat.sizes", include="THE1A")
 }

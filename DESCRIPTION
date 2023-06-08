@@ -8,5 +8,5 @@ Description: Annotating and parsing Transposable elements-associated data
 License: GPL3 
 Encoding: UTF-8
 LazyData: true
-Depends: dplyr, GenomicRanges
+Depends: dplyr, GenomicRanges, BSgenome, Biostrings
 RoxygenNote: 7.2.1
