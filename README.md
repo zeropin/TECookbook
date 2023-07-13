@@ -71,7 +71,7 @@ There are some prebuilt datasets that you can download and use in conjuction wit
 
 [**Hg38ToRepeat.over.chain**](https://share.weiyun.com/wB9jqSaO): The liftOver file from hg38 genomic coordinates to reference repeat coordinates, constructed by buildChain function
 
-[**Repeat.sizes**](https://share.weiyun.com/wB9jqSaO): The Repeat sizes file in Human genome, constructed by buildChain function
+[**hg38.Repeat.sizes**](https://share.weiyun.com/gNNRGUWR): The Repeat sizes file in Human genome, constructed by buildChain function
 
 
 ## Acknowledgement:
