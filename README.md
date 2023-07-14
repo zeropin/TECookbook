@@ -4,7 +4,7 @@ This package was developed to annotate and parse data associated with Transposab
 
 If you are analyzing ChIP-seq data associated with human or mouse repeats, you can directly download [prebuilt liftOver chain files](https://share.weiyun.com/wB9jqSaO) to save time. The [Makefile](https://github.com/zeropin/ZFPCookbook/blob/master/ZNF10/R/Makefile) contains template to covert ChIP-seq/exo reads in genomic coordinates to reads in repeat coordinates. The easiest way to start using this package is to copy and modify existing workflow of [ZNF10](https://github.com/zeropin/ZFPCookbook/blob/master/ZNF10/htmls/Analysis-of-ZNF10-signals-within-LINE-1.pdf) and [ZNF382](https://github.com/zeropin/ZFPCookbook/blob/master/ZNF382/htmls/Analysis-of-ZNF382-with-LIINE-1.pdf), which demostrate how to process raw ChIP-seq sequencing files into normalized signal tracks defined in reference repeat coordinates for visualization. Additionally, they instruct how to extract the putative binding sites sequence from any defined repeat locus for specificity analysis through liftOut operation.
 
-If you are analyzing some non-human/mouse repeats data, you will need to download and process the standard RepeatMasker output (.out and .align files) into some chain file using the **buildChain** function of this package first, and then perform liftIn operation for signal visualization.
+If you are analyzing some non-human/mouse data, you will need to download and process the standard RepeatMasker output (.out and .align files) into some chain file using the **buildChain** function of this package first, and then perform liftIn operation for signal visualization.
 
 ## Functions and code examples of TECookbook
 
