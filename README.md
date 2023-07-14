@@ -13,7 +13,7 @@ If you are analyzing some non-human/mouse repeats data, you will need to downloa
 ```r
 Example: convert human RepeatMasker output into chain file for liftIn operation
 TECookook::buildChain(alignment = "hg38.fa.align",
-                      chainFile = "Hg38ToRepeat.over.chain",
+                      chainFile = "hg38ToRepeat.over.chain",
                       sizeFile  = "hg38.Repeat.sizes")
 ```
 
