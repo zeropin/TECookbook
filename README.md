@@ -8,13 +8,13 @@ If you are analyzing some non-human/mouse repeats data, you will need to downloa
 
 ## Functions and code examples of TECookbook
 
-**buildChain**: Construct a liftOver chain file and repeat sizes file based on [RepeatMasker alignment file (.align)](https://repeatmasker.org/species/hg.html) to map ChIP signals onto repeat coordinates
+**buildChain**: Construct a liftOver chain file and repeat sizes file based on [RepeatMasker alignment file (.align)](https://repeatmasker.org/species/hg.html) to map ChIP signals into reference repeat coordinates defined by RepeatMasker or Dfam database
 
 ```r
 Example: convert human RepeatMasker output into chain file for liftIn operation
 TECookook::buildChain(alignment = "hg38.fa.align",
                       chainFile = "Hg38ToRepeat.over.chain",
-                      sizeFile = "hg38.Repeat.sizes")
+                      sizeFile  = "hg38.Repeat.sizes")
 ```
 
 **liftOut**: Lift all sites out of a specific repeat family at defined locus based on [RepeatMasker alignment file (.align)](https://repeatmasker.org/species/hg.html)
