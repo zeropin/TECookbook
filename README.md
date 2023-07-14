@@ -1,4 +1,4 @@
-# TECookbook: Annotating and parsing Transposable Elements-associated data
+# TECookbook: annotating and parsing Transposable Elements-associated data
 
 This package was developed to annotate and parse data associated with Transposable Elements (TEs). It has been successfully used to explore the co-evolution relationship between LINE-1 family repeats and ZNF10/ZNF382, which can be accessed via [ZNF10](https://github.com/zeropin/ZFPCookbook/tree/master/ZNF10) and [ZNF382](https://github.com/zeropin/ZFPCookbook/tree/master/ZNF382) respectively.
 
@@ -7,6 +7,22 @@ If you are analyzing ChIP-seq data associated with human or mouse repeats, you c
 If you are analyzing some non-human/mouse repeats data, you will need to download and process the standard RepeatMasker output (.out and .align files) into some chain file using the **buildChain** function of this package first, and then perform liftIn operation for signal visualization.
 
 ## Functions and code examples of TECookbook
+
+**buildChain**: Construct a liftOver chain file and repeat sizes file based on [RepeatMasker alignment file (.align)](https://repeatmasker.org/species/hg.html) to map ChIP signals onto repeat coordinates
+
+```r
+Example: convert human RepeatMasker output into chain file for liftIn operation
+TECookook::buildChain(alignment = "hg38.fa.align",
+                      chainFile = "Hg38ToRepeat.over.chain",
+                      sizeFile = "hg38.Repeat.sizes")
+```
+
+**liftOut**: Lift all sites out of a specific repeat family at defined locus based on [RepeatMasker alignment file (.align)](https://repeatmasker.org/species/hg.html)
+
+```r
+Example: extract all sequences located in 202 to 221 positions of human THE1B elements
+sites = liftOut(alignment = "hg38.fa.align", Repeat = "THE1B", start_pos = 202, end_pos = 221)
+```
 
 **buildAnnotation**: Convert [RepeatMasker file (.out)](https://repeatmasker.org/species/hg.html) to Genomic Range for annotation of ChIP-seq peaks or binding sites
 
@@ -33,22 +49,6 @@ library(TECookbook)
 data(Repeats.Human.hg38)
 annotatePeak = annotatePeaksNearRepeat(myPeakList, AnnotationData=Repeats.Human.hg38,
                                        minOverlap=1, output = "all")
-```
-
-**buildChain**: Construct a liftOver chain file and repeat sizes file based on [RepeatMasker alignment file (.align)](https://repeatmasker.org/species/hg.html) to map ChIP signals onto repeat coordinates
-
-```r
-Example: convert human RepeatMasker output into chain file for liftIn operation
-TECookook::buildChain(alignment = "hg38.fa.align",
-                      chainFile = "Hg38ToRepeat.over.chain",
-                      sizeFile = "hg38.Repeat.sizes")
-```
-
-**liftOut**: Lift all sites out of a specific repeat family at defined locus based on [RepeatMasker alignment file (.align)](https://repeatmasker.org/species/hg.html)
-
-```r
-Example: extract all sequences located in 202 to 221 positions of human THE1B elements
-sites = liftOut(alignment = "hg38.fa.align", Repeat = "THE1B", start_pos = 202, end_pos = 221)
 ```
 
 ## Installation instruction:
