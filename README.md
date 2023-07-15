@@ -69,11 +69,14 @@ There are some prebuilt datasets that you can download and use in conjuction wit
 
 [**Repeat.Mouse.mm10**](https://share.weiyun.com/TIYK2Q8s): Annotation data based on RepeatMasker file mm10.fa.out
 
-[**Hg38ToRepeat.over.chain**](https://share.weiyun.com/wB9jqSaO): The liftOver chain file from hg38 genomic coordinates to reference repeat coordinates, constructed by buildChain function
+[**hg38ToRepeat.over.chain**](https://share.weiyun.com/H5VP4vOD): The liftOver chain file from hg38 genomic coordinates to reference repeat coordinates, constructed by buildChain function
 
-[**hg38.Repeat.sizes**](https://share.weiyun.com/gNNRGUWR): The Repeat sizes file in Human genome, constructed by buildChain function
+[**hg38.Repeat.sizes**](https://share.weiyun.com/gNNRGUWR): The Repeat sizes file of Human genome, constructed by buildChain function
 
 
+[**mm10ToRepeat.over.chain**](https://share.weiyun.com/KmuhP56E): The liftOver chain file from mm10 genomic coordinates to reference repeat coordinates, constructed by buildChain function
+
+[**mm10.Repeat.sizes**](https://share.weiyun.com/ZtHiUs04): The Repeat sizes file of Mouse genome, constructed by buildChain function
 ## Acknowledgement:
 
 Some functions of this package, such as annotate\*\*, are derived and modified from other packages [ChIPpeakAnno](https://github.com/jianhong/ChIPpeakAnno). I want to thank their generous sharing of the source codes and permission for reuse.
