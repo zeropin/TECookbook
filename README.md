@@ -2,7 +2,7 @@
 
 This package was developed to annotate and parse data associated with Transposable Elements (TEs). It has been successfully used to explore the co-evolution relationship between LINE-1 family repeats and ZNF10/ZNF382, which can be accessed via [ZNF10](https://github.com/zeropin/ZFPCookbook/tree/master/ZNF10) and [ZNF382](https://github.com/zeropin/ZFPCookbook/tree/master/ZNF382) respectively.
 
-If you are analyzing ChIP-seq data associated with human or mouse repeats, you can directly download [prebuilt liftOver chain files](https://share.weiyun.com/aQEhcVf2) to save time. The [Makefile](https://github.com/zeropin/ZFPCookbook/blob/master/ZNF10/R/Makefile) contains template to covert ChIP-seq/exo reads in genomic coordinates to reads in repeat coordinates. The easiest way to start using this package is to copy and modify existing workflow of [ZNF10](https://github.com/zeropin/ZFPCookbook/blob/master/ZNF10/htmls/Analysis-of-ZNF10-signals-within-LINE-1.pdf) and [ZNF382](https://github.com/zeropin/ZFPCookbook/blob/master/ZNF382/htmls/Analysis-of-ZNF382-with-LIINE-1.pdf), which demostrate how to process raw ChIP-seq sequencing files into normalized signal tracks defined in reference repeat coordinates for visualization. Additionally, they instruct how to extract the putative binding sites sequence from any defined repeat locus for specificity analysis through liftOut operation.
+If you are analyzing ChIP-seq data associated with human or mouse repeats, you can directly download [prebuilt liftOver chain files](https://share.weiyun.com/aQEhcVf2) to save time. The [Makefile](https://github.com/zeropin/ZFPCookbook/blob/master/ZNF10/R/Makefile) contains template to convert ChIP-seq/exo reads in genomic coordinates to reads in repeat coordinates. The easiest way to start using this package is to copy and modify existing workflow of [ZNF10](https://github.com/zeropin/ZFPCookbook/blob/master/ZNF10/htmls/Analysis-of-ZNF10-signals-within-LINE-1.pdf) and [ZNF382](https://github.com/zeropin/ZFPCookbook/blob/master/ZNF382/htmls/Analysis-of-ZNF382-with-LIINE-1.pdf), which demostrate how to process raw ChIP-seq sequencing files into normalized signal tracks defined in reference repeat coordinates for visualization. Additionally, they instruct how to extract the putative binding sites sequence from any defined repeat locus for specificity analysis through liftOut operation.
 
 If you are analyzing some non-human/mouse data, you will need to download and process the standard RepeatMasker output (.out and .align files) into some chain file using the **buildChain** function of this package first, and then perform liftIn operation for signal visualization.
 
@@ -65,19 +65,21 @@ There are some prebuilt datasets that you can download and use in conjuction wit
 
 [**Repeat.Human.hg38**](https://share.weiyun.com/3gXU6Chs): Data from RepeatMasker file hg38.fa.out, used for annotating ChIP-seq peaks or genomic sites overlap with repeats
 
-[**Repeat.Human.hg19**](https://share.weiyun.com/tIlSmg3m): Data from RepeatMasker file hg19.fa.out
+[**Repeat.Human.hg19**](https://share.weiyun.com/tIlSmg3m): Data from RepeatMasker file hg19.fa.out; same usage as above.
 
-[**Repeat.Mouse.mm10**](https://share.weiyun.com/TIYK2Q8s): Data from RepeatMasker file mm10.fa.out
+[**Repeat.Mouse.mm10**](https://share.weiyun.com/TIYK2Q8s): Data from RepeatMasker file mm10.fa.out; same usage as above.
 
-[**hg38ToRepeat.over.chain**](https://share.weiyun.com/H5VP4vOD): The liftOver chain file from hg38 genomic coordinates to reference repeat coordinates, constructed by buildChain function
+[**hg38ToRepeat.over.chain**](https://share.weiyun.com/H5VP4vOD): The liftOver chain file from hg38 genomic coordinates to reference repeat coordinates, constructed by buildChain function.
 
-[**hg38.Repeat.sizes**](https://share.weiyun.com/gNNRGUWR): The Repeat sizes file of Human genome, constructed by buildChain function
+[**hg38.Repeat.sizes**](https://share.weiyun.com/gNNRGUWR): The Repeat sizes file of Human genome, constructed by buildChain function.
 
 
 [**mm10ToRepeat.over.chain**](https://share.weiyun.com/KmuhP56E): The liftOver chain file from mm10 genomic coordinates to reference repeat coordinates, constructed by buildChain function
 
 [**mm10.Repeat.sizes**](https://share.weiyun.com/ZtHiUs04): The Repeat sizes file of Mouse genome, constructed by buildChain function
 ## Acknowledgement:
+
+The [**liftOver tool](https://hgdownload.soe.ucsc.edu/downloads.html#utilities_downloads), developed by UCSC genome browser team, is needed here to map ChIP-seq reads into repeats coordinates.
 
 Some functions of this package, such as annotate\*\*, are derived and modified from other packages [ChIPpeakAnno](https://github.com/jianhong/ChIPpeakAnno). I want to thank their generous sharing of the source codes and permission for reuse.
 
