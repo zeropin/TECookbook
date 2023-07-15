@@ -63,23 +63,23 @@ RStudio is recommended to install and use this package.
 
 There are some prebuilt datasets that you can download and use in conjuction with this package directly
 
-[**Repeat.Human.hg38**](https://share.weiyun.com/3gXU6Chs): Data from RepeatMasker file hg38.fa.out, used for annotating ChIP-seq peaks or genomic sites overlap with repeats
+[**Repeat.Human.hg38**](https://share.weiyun.com/3gXU6Chs): Data from RepeatMasker file hg38.fa.out, used for annotating ChIP-seq peaks or genomic sites that overlap with repeats.
 
-[**Repeat.Human.hg19**](https://share.weiyun.com/tIlSmg3m): Data from RepeatMasker file hg19.fa.out; same usage as above.
+[**Repeat.Human.hg19**](https://share.weiyun.com/tIlSmg3m): Data from RepeatMasker file hg19.fa.out; the same usage as above.
 
-[**Repeat.Mouse.mm10**](https://share.weiyun.com/TIYK2Q8s): Data from RepeatMasker file mm10.fa.out; same usage as above.
+[**Repeat.Mouse.mm10**](https://share.weiyun.com/TIYK2Q8s): Data from RepeatMasker file mm10.fa.out; the same usage as above.
 
 [**hg38ToRepeat.over.chain**](https://share.weiyun.com/H5VP4vOD): The liftOver chain file from hg38 genomic coordinates to reference repeat coordinates, constructed by buildChain function.
 
 [**hg38.Repeat.sizes**](https://share.weiyun.com/gNNRGUWR): The Repeat sizes file of Human genome, constructed by buildChain function.
 
 
-[**mm10ToRepeat.over.chain**](https://share.weiyun.com/KmuhP56E): The liftOver chain file from mm10 genomic coordinates to reference repeat coordinates, constructed by buildChain function
+[**mm10ToRepeat.over.chain**](https://share.weiyun.com/KmuhP56E): The liftOver chain file from mm10 genomic coordinates to reference repeat coordinates, constructed by buildChain function.
 
-[**mm10.Repeat.sizes**](https://share.weiyun.com/ZtHiUs04): The Repeat sizes file of Mouse genome, constructed by buildChain function
+[**mm10.Repeat.sizes**](https://share.weiyun.com/ZtHiUs04): The Repeat sizes file of Mouse genome, constructed by buildChain function.
 ## Acknowledgement:
 
-The [**liftOver tool](https://hgdownload.soe.ucsc.edu/downloads.html#utilities_downloads), developed by UCSC genome browser team, is needed here to map ChIP-seq reads into repeats coordinates.
+The [liftOver tool](https://hgdownload.soe.ucsc.edu/downloads.html#utilities_downloads), developed by UCSC genome browser team, is needed here to map ChIP-seq reads into repeats coordinates.
 
 Some functions of this package, such as annotate\*\*, are derived and modified from other packages [ChIPpeakAnno](https://github.com/jianhong/ChIPpeakAnno). I want to thank their generous sharing of the source codes and permission for reuse.
 
