@@ -36,7 +36,7 @@ Repeats.Human.hg38 = buildAnnotation("hg38.fa.out")
 ```r
 Example: annotate mySiteList by Repeat.hg38, and output all sites
 library(TECookbook)
-data(Reoeats.Human.hg38)
+load("Repeats.Human.hg38.RData")
 annotateSite = annotateSitesInRepeat(mySiteList, AnnotationData=Repeats.Human.hg38, 
                SiteLocForDistance = "middle", RepeatLocForDistance = "middle",
                output = "all")
@@ -46,7 +46,7 @@ annotateSite = annotateSitesInRepeat(mySiteList, AnnotationData=Repeats.Human.hg
 ```r
 Example: annotate myPeakList by Repeat.hg38, and output all peaks
 library(TECookbook)
-data(Repeats.Human.hg38)
+load("Repeats.Human.hg38.RData")
 annotatePeak = annotatePeaksNearRepeat(myPeakList, AnnotationData=Repeats.Human.hg38,
                                        minOverlap=1, output = "all")
 ```
@@ -63,11 +63,11 @@ RStudio is recommended to install and use this package.
 
 There are some prebuilt datasets that you can download and use in conjuction with this package directly
 
-[**Repeat.Human.hg38**](https://share.weiyun.com/3gXU6Chs): Annotation data based on RepeatMasker file hg38.fa.out
+[**Repeat.Human.hg38**](https://share.weiyun.com/3gXU6Chs): Data from RepeatMasker file hg38.fa.out, used for annotating ChIP-seq peaks or genomic sites overlap with repeats
 
-[**Repeat.Human.hg19**](https://share.weiyun.com/tIlSmg3m): Annotation data based on RepeatMasker file hg19.fa.out
+[**Repeat.Human.hg19**](https://share.weiyun.com/tIlSmg3m): Data from RepeatMasker file hg19.fa.out
 
-[**Repeat.Mouse.mm10**](https://share.weiyun.com/TIYK2Q8s): Annotation data based on RepeatMasker file mm10.fa.out
+[**Repeat.Mouse.mm10**](https://share.weiyun.com/TIYK2Q8s): Data from RepeatMasker file mm10.fa.out
 
 [**hg38ToRepeat.over.chain**](https://share.weiyun.com/H5VP4vOD): The liftOver chain file from hg38 genomic coordinates to reference repeat coordinates, constructed by buildChain function
 
