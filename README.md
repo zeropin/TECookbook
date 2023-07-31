@@ -85,4 +85,6 @@ Some functions of this package, such as annotate\*\*, are derived and modified f
 
 Please contact me if you have any question.
 
-Zheng Zuo [zeropin\@live.cn](mailto:zeropin@live.cn)
+Zheng Zuo (左政)
+
+[zeropin\@live.cn](mailto:zeropin@live.cn)
