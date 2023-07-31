@@ -10,13 +10,20 @@ buildAnnotation <- function(file){
                                col_names = c("swScore",	"percDiv",	"percDel",	"percIns",	"seqnames",	"Start",	"End",
                                              "genoLeft",	"strand",	"repName", "repFamily",	"repStart",	"repEnd",	"repLeft",	"id"),
                                col_types = cols(swScore = col_integer(),  percDiv = col_double(), percDel = col_double(), percIns = col_double())) %>%
+    dplyr::mutate(Family= as.factor(repFamily),
+                  Name  = as.factor(repName),
+                  strand= if_else(strand=="C", "-", "+"),
+                  repeatStart = as.integer(gsub("[(.*)]","", repStart)),
+                  repeatEnd   = as.integer(repEnd),
+                  repeatLeft  = as.integer(gsub("[(.*)]","", repLeft)),
+                  ) %>%
     dplyr::select(seqnames, Start, End, strand, SW.Score = swScore,
-                  Family = repFamily, Name = repName,
-                  repeatStart = repStart, repeatEnd = repEnd, repeatLeft = repLeft, repeatID = id
+                  Family, Name,
+                  repeatStart,
+                  repeatEnd,
+                  repeatLeft,
+                  repeatID = id
     ) %>%
-    dplyr::mutate(Family= as.factor(Family),
-                  Name  = as.factor(Name),
-                  strand= if_else(strand=="C", "-", "+")) %>%
     GenomicRanges::makeGRangesFromDataFrame(keep.extra.columns = TRUE)
 
   names(Repeats) <- Repeats$repeatID
