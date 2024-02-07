@@ -1,7 +1,7 @@
 Package: TECookbook
 Type: Package
 Title: Cookbook for Transposable elements (TEs)
-Version: 1.01
+Version:  2.718
 Author: Zheng Zuo
 Maintainer: Zheng Zuo <zeropin@live.cn>
 Description: Annotating and parsing Transposable elements-associated data
