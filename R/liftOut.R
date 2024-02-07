@@ -4,7 +4,8 @@
 #' @param Repeat Name of Repeat to be extracted
 #' @param start_pos Starting position of extracted locus within repeat consensus sequence, defined in Dfam database
 #' @param end_pos   End position of extracted locus within repeat consensus sequence, defined in Dfam database
-#' @param RepeatID  Extract regions only within defined RepeatIDs; If NULL, no such restriction.
+#' @param RepeatTagID  Extract regions only within defined RepeatTagIDs defined in alignment file, e.g., c_b1s251i0; If NULL, no such restriction.
+#' @param RepeatID  Extract regions only within defined RepeatIDs, e.g., 1, 2, 3, etc; If NULL, no such restriction.
 #' @examples
 #'          ##Example 1: lift out all sites from THE1B repeats in hg38 genome
 #'          sites = liftOut(alignment = "hg38.fa.align", Repeat = "THE1B", start_pos = 202, end_pos = 221)
@@ -15,15 +16,19 @@ liftOut <- function(alignment,
                     Repeat,
                     start_pos,
                     end_pos,
+                    RepeatTagID = NULL,
                     RepeatID = NULL) {
 
   Target_Repeat   = Repeat
+  Target_RepeatTagID = unique(RepeatTagID)
   Target_RepeatID = unique(RepeatID)
 
   infCon   <- file(alignment, open = "rt")
 
-  result = tribble( ~seqnames, ~start, ~end, ~strand, ~Sequence, ~RepeatID)
-  guideLine = paste0("[0-9].*", Target_Repeat)
+  result = tribble( ~seqnames, ~start, ~end, ~strand, ~Sequence, ~RepeatTagID, ~RepeatID)
+
+  #The guideLine is used to find the blocks containing the specified repeat elements
+  guideLine = paste0("[0-9].*", Target_Repeat, "#")
 
   remaining=TRUE
   while (remaining) {
@@ -57,6 +62,7 @@ liftOut <- function(alignment,
         Ref_Left = strsplit(words[[12]], split = "\\(|\\)")[[1]][[2]]
         Ref_End  = as.integer(words[[13]])
         Ref_Start = as.integer(words[[14]]) - 1
+        RepeatTagID = words[[15]]
         RepeatID = words[[16]]
       }
       else{
@@ -65,6 +71,7 @@ liftOut <- function(alignment,
         Ref_Start = as.integer(words[[11]]) - 1
         Ref_End  = as.integer(words[[12]])
         Ref_Left = strsplit(words[[13]], split = "\\(|\\)")[[1]][[2]]
+        RepeatTagID = words[[14]]
         RepeatID = words[[15]]
       }
 
@@ -81,7 +88,8 @@ liftOut <- function(alignment,
 
       if (Ref_Start < start_pos &
           Ref_End >= end_pos &
-          (is.null(Target_RepeatID) | (RepeatID%in%Target_RepeatID))) {
+          (is.null(Target_RepeatID) | (RepeatID%in%Target_RepeatID)) &
+          (is.null(Target_RepeatTagID) | (RepeatTagID%in%Target_RepeatTagID))) {
         bases_position = stringr::str_locate_all(refLine, "[A-Z]")[[1]][, 'start']
 
         if (reverse == TRUE) {
@@ -115,7 +123,7 @@ liftOut <- function(alignment,
                              "[A-Z]") + Rep_Start -> end
         }
 
-        writeLines(paste(Rep_Chr, start, end, Sequence, RepeatID))
+        writeLines(paste(Rep_Chr, start, end, Sequence, RepeatTagID, RepeatID))
         result = add_row(
           result,
           seqnames = Rep_Chr,
@@ -123,6 +131,7 @@ liftOut <- function(alignment,
           end = end,
           strand = ifelse(reverse, "-", "+"),
           Sequence = Sequence,
+          RepeatTagID = RepeatTagID,
           RepeatID = RepeatID
         )
       }
